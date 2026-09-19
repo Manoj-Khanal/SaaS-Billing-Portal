@@ -841,9 +841,11 @@ function Login({ onLogin, register, msg }) {
       notice={msg}
     >
 
-      <div className="error">
-        {err}
-      </div>
+      {err && (
+        <div className="error">
+          {err}
+        </div>
+      )}
 
       <form onSubmit={submit}>
 
@@ -918,9 +920,11 @@ function Register({ onRegister, login }) {
       sub="Start managing your SaaS customers"
     >
 
-      <div className="error">
-        {err}
-      </div>
+      {err && (
+        <div className="error">
+          {err}
+        </div>
+      )}
 
       <form onSubmit={submit}>
 

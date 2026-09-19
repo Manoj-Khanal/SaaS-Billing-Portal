@@ -1772,3 +1772,48 @@ td button:hover {
     font-size: 12px;
   }
 }
+
+/* =========================================
+   MOBILE SIDEBAR FIX
+   Keep user profile + logout visible
+========================================= */
+
+@media (max-width: 768px) {
+  aside {
+    height: 100dvh !important;
+    min-height: 100dvh !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+  }
+
+  aside > div:first-child {
+    flex: 0 0 auto;
+  }
+
+  .side-user {
+    display: flex !important;
+    flex-shrink: 0 !important;
+    margin-top: auto !important;
+    padding: 16px !important;
+    position: sticky !important;
+    bottom: 0 !important;
+    z-index: 20 !important;
+  }
+
+  .side-user span {
+    display: flex !important;
+    flex-direction: column !important;
+    min-width: 0;
+  }
+
+  .side-user span small {
+    display: block !important;
+  }
+
+  .side-user button {
+    display: block !important;
+  }
+}
